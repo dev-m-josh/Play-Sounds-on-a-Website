@@ -113,7 +113,34 @@ document.querySelector(".l").addEventListener("click", function (){
       })
   }
   
+//Object
 
+var houseKeeper1 = {
+    name : "joan",
+    age : 20,
+    work_experience :"2yrs",
+    salary_expectation : 20000,
+    cleaning_areas : ["Bathroom", "Kitchen", "Table room", "Guest room"]
+}
+
+//Initialise Object
+
+function Housekeeper (name, age, work_experience, salary_expectation, cleaning_areas) {
+    this.name = name;
+    this.age = age + " years";
+    this.work_experience = work_experience;
+    this.salary_expectation = "$" + salary_expectation;
+    this.cleaning_areas = cleaning_areas;
+    this.clean = function() {
+        alert("cleaning is in progress.....")
+    }
+    console.log(this.clean)
+}
+
+
+
+var houseKeeper1 = new Housekeeper("joshua", 20, "2yrs",20000, ["Kitchen", "Bathroom"])
+console.log (houseKeeper1)
 
 
 
